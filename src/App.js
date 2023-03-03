@@ -62,9 +62,13 @@ const Part = ({name, exercise}) => {
 }
 
 const Total = ({parts}) => {
+  const value = 0
+  const total = parts.reduce(
+    (accumulator, part) => accumulator + part.exercises, value)
+  
   return (
     <div>
-      <p>Number of exercises - {parts[0].exercises + parts[1].exercises + parts[2].exercises}</p>
+      <p><b>total of {total} exercises</b></p>
     </div>
   )
 }
